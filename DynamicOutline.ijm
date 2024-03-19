@@ -1,7 +1,7 @@
 /*
- * DynamicOutline tries to draw a polygonal selection around the parasite
- * vacuole using thresholding and ROI selections. Normally the coordinates of
- * the polygon are oversampled, and so the polygon is also simplified.
+ * DynamicOutline tries to draw a simplified polygonal selection around an object.
+ * Normally the coordinates of the polygon are more than necessary, and so 
+ * DynamicOutline tries to remove unnecessary coordinates to simplify the polygon.
  * 
  * DynamicOutline takes the image title as an argument, either passed as a
  * string [runMacro("DynamicOutline", "image_04.tif");] or a varialbe containing
@@ -43,8 +43,7 @@ macro "DynamicOutline" {
 		if (i == xpoints.length-1) {
 			xDiff = abs(xpoints[xpoints.length-1]-xpoints[0]);
 			yDiff = abs(ypoints[ypoints.length-1]-ypoints[0]);		
-		}
-		else {
+		} else {
 			xDiff = abs(xpoints[i+1] - xpoints[i]);
 			yDiff = abs(ypoints[i+1] - ypoints[i]);
 		}
