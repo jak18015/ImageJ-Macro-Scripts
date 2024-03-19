@@ -1,6 +1,6 @@
 /*
- * CenterImage will center the image specified in the 
- * runMacro() function as a string argument.
+ * CenterImage centers the image specified in the 
+ * runMacro() function to the center of your monitor.
  * The title of the image should be given as an explicit string or as a variable
  * containing the image title string.
  * 
