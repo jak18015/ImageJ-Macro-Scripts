@@ -1,5 +1,5 @@
 /*
- * DynamiCrop tries to actively draw a bounding rectangle around the vacuole,
+ * DynamiCrop tries to draw a bounding rectangle around an area of interest,
  * and then provides a dialogue option to be able to adjust box size and to
  * confirm the crop once accepted.
  * The original file is duplicated, so no effect occurs to the original file.
@@ -56,7 +56,7 @@ macro "DynamiCrop" {
 		selectWindow(imgTitle);
 		title = getTitle();
 		runMacro("dynamicCrop", title);	
-	}else {
+	} else {
 		// Original image closed and the duplicate renamed to the original's title
 		selectWindow(imgTitle);
 		oldTitle = getTitle();
